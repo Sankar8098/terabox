@@ -4,13 +4,16 @@ from dotenv import load_dotenv
 class Config:
     def __init__(self):
         load_dotenv()
-        self.API_ID = os.getenv("24444928")
-        self.API_HASH = os.getenv("0a278a515cd13ec8802b7dabed73dede")
-        self.BOT_TOKEN = os.getenv("7029092370:AAFQU0Ve0zDlw_tKqx0sDC-mOgVRdBT1Ss0")
+        self.API_ID = os.getenv("API_ID")
+        self.API_HASH = os.getenv("API_HASH")
+        self.BOT_TOKEN = os.getenv("BOT_TOKEN")
         self.DB_NAME = os.getenv("DB_NAME", "terabox_links.db")
         self.MAX_CONCURRENT_DOWNLOADS = int(os.getenv("MAX_CONCURRENT_DOWNLOADS", 5))
-        self.BOT_USERNAME = os.getenv("Terabox_download_Sk_bot")
-        self.DUMMY_ID = os.getenv("7079923017")
+        self.BOT_USERNAME = os.getenv("BOT_USERNAME")
+        self.DUMMY_ID = os.getenv("DUMMY_ID")
 
 def load_config():
-    return Config()
+    config = Config()
+    # Debug prints
+    print(f"Loaded Config: API_ID={config.API_ID}, API_HASH={config.API_HASH}, BOT_TOKEN={config.BOT_TOKEN}, DB_NAME={config.DB_NAME}, MAX_CONCURRENT_DOWNLOADS={config.MAX_CONCURRENT_DOWNLOADS}, BOT_USERNAME={config.BOT_USERNAME}, DUMMY_ID={config.DUMMY_ID}")
+    return config
