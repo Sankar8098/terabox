@@ -9,8 +9,8 @@ class Config:
         self.BOT_TOKEN = os.getenv("7029092370:AAEhUE-EibLL1Akv26od7PCv0rqL1mXk_m0")
         self.DB_NAME = os.getenv("DB_NAME", "terabox_links.db")
         self.MAX_CONCURRENT_DOWNLOADS = int(os.getenv("MAX_CONCURRENT_DOWNLOADS", 5))
-        self.BOT_USERNAME = os.getenv("bot_username")
-        self.DUMMY_ID = os.getenv("dummy_id")
+        self.BOT_USERNAME = os.getenv("Terabox_download_Sk_bot")
+        self.DUMMY_ID = os.getenv("7079923017")
 
 def load_config():
     return Config()
