@@ -4,13 +4,13 @@ from dotenv import load_dotenv
 class Config:
     def __init__(self):
         load_dotenv()
-        self.API_ID = os.getenv("API_ID")
-        self.API_HASH = os.getenv("API_HASH")
-        self.BOT_TOKEN = os.getenv("BOT_TOKEN")
+        self.API_ID = os.getenv("23990433")
+        self.API_HASH = os.getenv("e6c4b6ee1933711bc4da9d7d17e1eb20")
+        self.BOT_TOKEN = os.getenv("6662329787:AAHUuH45cuvNfBj_pzd5LO5Q8N50N3h5lCw")
         self.DB_NAME = os.getenv("DB_NAME", "terabox_links.db")
         self.MAX_CONCURRENT_DOWNLOADS = int(os.getenv("MAX_CONCURRENT_DOWNLOADS", 5))
-        self.BOT_USERNAME = os.getenv("BOT_USERNAME")
-        self.DUMMY_ID = os.getenv("DUMMY_ID")
+        self.BOT_USERNAME = os.getenv("SKAutoApprovalbot")
+        self.DUMMY_ID = os.getenv("5821871362")
 
 def load_config():
     config = Config()
