@@ -13,9 +13,14 @@ async def main():
     config = load_config()
     logger = setup_logger()
 
+    # Debug prints to verify configuration loading
     print(f"API_ID: {config.API_ID}")
     print(f"API_HASH: {config.API_HASH}")
     print(f"BOT_TOKEN: {config.BOT_TOKEN}")
+    print(f"DB_NAME: {config.DB_NAME}")
+    print(f"MAX_CONCURRENT_DOWNLOADS: {config.MAX_CONCURRENT_DOWNLOADS}")
+    print(f"BOT_USERNAME: {config.BOT_USERNAME}")
+    print(f"DUMMY_ID: {config.DUMMY_ID}")
 
     app = Client(
         "terabox_downloader",
@@ -27,7 +32,7 @@ async def main():
     client_started = False
     try:
         await init_database()
-        await init_session(max_concurrent_downloads=5)
+        await init_session(max_concurrent_downloads=config.MAX_CONCURRENT_DOWNLOADS)
         register_handlers(app)
 
         await app.start()
