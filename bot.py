@@ -13,6 +13,10 @@ async def main():
     config = load_config()
     logger = setup_logger()
 
+    print(f"API_ID: {config.API_ID}")
+    print(f"API_HASH: {config.API_HASH}")
+    print(f"BOT_TOKEN: {config.BOT_TOKEN}")
+
     app = Client(
         "terabox_downloader",
         api_id=config.API_ID,
